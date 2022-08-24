@@ -50,20 +50,21 @@ class GameApplication {
       return;
     }
 
-    if (value === true) {
-      this.$gameBoard.correct(idx);
-      await timer(500);
-      this.isClicking = false;
-    }
-
     if (next === true) {
       this.$score.increase();
+      this.$gameBoard.correct(idx);
       const score = this.$score.getScore();
       this.$highScore.compare(score);
       await timer(1000);
       this.$gameBoard.start(score + 1);
       this.isClicking = false;
       return;
+    }
+
+    if (value === true) {
+      this.$gameBoard.correct(idx);
+      await timer(500);
+      this.isClicking = false;
     }
 
     if (next === false) {
