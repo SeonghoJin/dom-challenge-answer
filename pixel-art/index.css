@@ -1,0 +1,25 @@
+.box {
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel-group {
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  gap: 0;
+  display: grid;
+}
+
+.pixel {
+}
+
+.palette {
+  display: flex;
+}
