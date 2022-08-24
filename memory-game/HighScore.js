@@ -10,7 +10,7 @@ class HighScore {
   }
 
   compare = (value) => {
-    this.score = Math.max(this.score, value);
+    this.highScore = Math.max(this.highScore, value);
     this.render();
   };
 

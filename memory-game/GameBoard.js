@@ -32,7 +32,11 @@ class GameBoard {
       await flickerBox.flicker("blue");
       await timer(600);
     }
-    this.$main.addEventListener("click", this.onClick);
+    this.clickEventId = this.$main.addEventListener("click", this.onClick);
+  };
+
+  removeClickEvent = () => {
+    this.$main.removeEventListener("click", this.onClick);
   };
 
   wrong = async (idx) => {
